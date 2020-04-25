@@ -30,7 +30,7 @@ All algorithms (ten in total) are in [SPD.m](SPD.m). They can use functions of [
 
 ## Notes
 
-Only Matlab codes for the our collected CM dataset is published. Readers can easily apply them to other datasets including the [AG dataset](http://archive.ics.uci.edu/ml/datasets/Activity+Recognition+from+Single+Chest-Mounted+Accelerometer) and the [IUM dataset](http://archive.ics.uci.edu/ml/datasets/Indoor+User+Movement+Prediction+from+RSS+data).
+Only Matlab codes implementing ten algorithms on the collected CM dataset is published. Readers can easily apply them to other datasets including the [AG dataset](http://archive.ics.uci.edu/ml/datasets/Activity+Recognition+from+Single+Chest-Mounted+Accelerometer) and the [IUM dataset](http://archive.ics.uci.edu/ml/datasets/Indoor+User+Movement+Prediction+from+RSS+data).
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
