@@ -14,11 +14,11 @@ SDTW, SCIDTW, SDDTW, SWDTW and SWDDTW
 ## Datasets
 
 ### Published datasets
-* [Cortical mastoidectomy (CM) dataset](workspace_cm.mat)
+* Cortical mastoidectomy (CM) dataset in [workspace_cm.mat](workspace_cm.mat)
 
 ### Open datasets
-* Activity recognition (AG) dataset
-* Indoor user movement (IUM) dataset
+* [Activity recognition (AG) dataset](http://archive.ics.uci.edu/ml/datasets/Activity+Recognition+from+Single+Chest-Mounted+Accelerometer)
+* [Indoor user movement (IUM) dataset](http://archive.ics.uci.edu/ml/datasets/Indoor+User+Movement+Prediction+from+RSS+data)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
