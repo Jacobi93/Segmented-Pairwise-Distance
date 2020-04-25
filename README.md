@@ -13,7 +13,7 @@ SDTW, SCIDTW, SDDTW, SWDTW and SWDDTW
 
 ## Datasets
 
-### Published datasets
+### Published dataset
 * Cortical mastoidectomy (CM) dataset in [workspace_cm.mat](workspace_cm.mat)
 
 ### Open datasets
