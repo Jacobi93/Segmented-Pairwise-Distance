@@ -9,9 +9,7 @@ for m = 1:21
 end
 
 %% dataset
-dataset = {pz1, pz2, pz3, pz4, pz5, pz6, pz7, pz8, pz9, pz10, pz11, pz12, ...
-    pz13, pz14, pz15, pz16, pz17, pz18, pz19, pz20, pz21};
-dataset2 = {psz1, psz2, psz3, psz4, psz5, psz6, psz7, psz8, psz9, psz10, ...
+dataset = {psz1, psz2, psz3, psz4, psz5, psz6, psz7, psz8, psz9, psz10, ...
     psz11, psz12, psz13, psz14, psz15, psz16, psz17, psz18, psz19, psz20, psz21};
 
 %% DTW
@@ -42,8 +40,8 @@ result_ol99max = zeros(21,21);
 for m = 1:21
     for n = 1:21
         if m < n
-            m1 = dataset2{1, m};
-            m2 = dataset2{1, n};
+            m1 = dataset{1, m};
+            m2 = dataset{1, n};
             % segment when distance > quantile
             diff1=sqrt(sum((diff(m1)).^2, 2));
             diff2=sqrt(sum((diff(m2)).^2, 2));
@@ -197,8 +195,8 @@ result_ol99max = zeros(21,21);
 for m = 1:21
     for n = 1:21
         if m < n
-            m1 = dataset2{1, m};
-            m2 = dataset2{1, n};
+            m1 = dataset{1, m};
+            m2 = dataset{1, n};
             % segment when distance > quantile
             diff1=sqrt(sum((diff(m1)).^2, 2));
             diff2=sqrt(sum((diff(m2)).^2, 2));
@@ -366,8 +364,8 @@ result_ol99max = zeros(21,21);
 for m = 1:21
     for n = 1:21
         if m < n
-            m1 = dataset2{1, m};
-            m2 = dataset2{1, n};
+            m1 = dataset{1, m};
+            m2 = dataset{1, n};
             % segment when distance > quantile
             diff1=sqrt(sum((diff(m1)).^2, 2));
             diff2=sqrt(sum((diff(m2)).^2, 2));
@@ -535,8 +533,8 @@ result_ol99max = zeros(21,21);
 for m = 1:21
     for n = 1:21
         if m < n
-            m1 = dataset2{1, m};
-            m2 = dataset2{1, n};
+            m1 = dataset{1, m};
+            m2 = dataset{1, n};
             % segment when distance > quantile
             diff1=sqrt(sum((diff(m1)).^2, 2));
             diff2=sqrt(sum((diff(m2)).^2, 2));
@@ -702,8 +700,8 @@ result_ol99max = zeros(21,21);
 for m = 1:21
     for n = 1:21
         if m < n
-            m1 = dataset2{1, m};
-            m2 = dataset2{1, n};
+            m1 = dataset{1, m};
+            m2 = dataset{1, n};
             % segment when distance > quantile
             diff1=sqrt(sum((diff(m1)).^2, 2));
             diff2=sqrt(sum((diff(m2)).^2, 2));
