@@ -30,30 +30,7 @@ for m = 1:21
 end
 toc
 
-b = result1;
-% Silhouette
-sil_dtw = zeros(21,1);
-for i = 1:21
-    x = b(i,:);
-    if mod(i,3) == 0
-        a = (x(i-1)+x(i-2))/2;
-        x((i-2):i)=[];
-    elseif mod(i,3) == 1
-        a = (x(i+1)+x(i+2))/2;
-        x(i:(i+2))=[];
-    else
-        a = (x(i-1)+x(i+1))/2;
-        x((i-1):(i+1))=[];
-    end    
-    % 18 numbers are left
-    diff_clus = zeros(6,1);
-    for j = 1:6
-        diff_clus(j) = (x(3*j-2)+x(3*j-1)+x(3*j))/3;
-    end
-    c = min(diff_clus);
-    sil_dtw(i) = (c-a)/max(a,c);
-end
-mean_sil_dtw = sum(sil_dtw)/21;
+mean_sil_dtw = SI(result1);
 mean_sil_dtw
 % 0.0540
 
@@ -184,30 +161,7 @@ for m = 1:21
     end
 end
 
-b = result_ol99min;
-% Silhouette
-sil_ol99min= zeros(21,1);
-for i = 1:21
-    x = b(i,:);
-    if mod(i,3) == 0
-        a = (x(i-1)+x(i-2))/2;
-        x((i-2):i)=[];
-    elseif mod(i,3) == 1
-        a = (x(i+1)+x(i+2))/2;
-        x(i:(i+2))=[];
-    else
-        a = (x(i-1)+x(i+1))/2;
-        x((i-1):(i+1))=[];
-    end    
-    % 18 numbers are left
-    diff_clus = zeros(6,1);
-    for j = 1:6
-        diff_clus(j) = (x(3*j-2)+x(3*j-1)+x(3*j))/3;
-    end
-    c = min(diff_clus);
-    sil_ol99min(i) = (c-a)/max(a,c);
-end
-mean_sil_ol99min = sum(sil_ol99min)/21;
+mean_sil_ol99min = SI(result_ol99min);
 mean_sil_ol99min
 % 0.1394
 
@@ -231,30 +185,7 @@ for m = 1:21
 end
 toc
 
-b = result1;
-% Silhouette
-sil_dtw = zeros(21,1);
-for i = 1:21
-    x = b(i,:);
-    if mod(i,3) == 0
-        a = (x(i-1)+x(i-2))/2;
-        x((i-2):i)=[];
-    elseif mod(i,3) == 1
-        a = (x(i+1)+x(i+2))/2;
-        x(i:(i+2))=[];
-    else
-        a = (x(i-1)+x(i+1))/2;
-        x((i-1):(i+1))=[];
-    end 
-    % 18 numbers are left
-    diff_clus = zeros(6,1);
-    for j = 1:6
-        diff_clus(j) = (x(3*j-2)+x(3*j-1)+x(3*j))/3;
-    end
-    c = min(diff_clus);
-    sil_dtw(i) = (c-a)/max(a,c);
-end
-mean_sil_dtw = sum(sil_dtw)/21;
+mean_sil_dtw = SI(result1);
 mean_sil_dtw
 % 0.1562
 
@@ -389,30 +320,7 @@ for m = 1:21
     end
 end
 
-b = result_ol99min;
-% Silhouette
-sil_ol99min= zeros(21,1);
-for i = 1:21
-    x = b(i,:);
-    if mod(i,3) == 0
-        a = (x(i-1)+x(i-2))/2;
-        x((i-2):i)=[];
-    elseif mod(i,3) == 1
-        a = (x(i+1)+x(i+2))/2;
-        x(i:(i+2))=[];
-    else
-        a = (x(i-1)+x(i+1))/2;
-        x((i-1):(i+1))=[];
-    end   
-    % 18 numbers are left
-    diff_clus = zeros(6,1);
-    for j = 1:6
-        diff_clus(j) = (x(3*j-2)+x(3*j-1)+x(3*j))/3;
-    end
-    c = min(diff_clus);
-    sil_ol99min(i) = (c-a)/max(a,c);
-end
-mean_sil_ol99min = sum(sil_ol99min)/21;
+mean_sil_ol99min = SI(result_ol99min);
 mean_sil_ol99min
 % 0.2260
 
@@ -446,30 +354,7 @@ for m = 1:21
 end
 toc
 
-b = result1;
-% Silhouette
-sil_dtw = zeros(21,1);
-for i = 1:21
-    x = b(i,:);
-    if mod(i,3) == 0
-        a = (x(i-1)+x(i-2))/2;
-        x((i-2):i)=[];
-    elseif mod(i,3) == 1
-        a = (x(i+1)+x(i+2))/2;
-        x(i:(i+2))=[];
-    else
-        a = (x(i-1)+x(i+1))/2;
-        x((i-1):(i+1))=[];
-    end   
-    % 18 numbers are left
-    diff_clus = zeros(6,1);
-    for j = 1:6
-        diff_clus(j) = (x(3*j-2)+x(3*j-1)+x(3*j))/3;
-    end
-    c = min(diff_clus);
-    sil_dtw(i) = (c-a)/max(a,c);
-end
-mean_sil_dtw = sum(sil_dtw)/21;
+mean_sil_dtw = SI(result1);
 mean_sil_dtw
 % -0.2341
 
@@ -616,30 +501,7 @@ for m = 1:21
     end
 end
 
-b = result_ol99min;
-% Silhouette
-sil_ol99min= zeros(21,1);
-for i = 1:21
-    x = b(i,:);
-    if mod(i,3) == 0
-        a = (x(i-1)+x(i-2))/2;
-        x((i-2):i)=[];
-    elseif mod(i,3) == 1
-        a = (x(i+1)+x(i+2))/2;
-        x(i:(i+2))=[];
-    else
-        a = (x(i-1)+x(i+1))/2;
-        x((i-1):(i+1))=[];
-    end    
-    % 18 numbers are left
-    diff_clus = zeros(6,1);
-    for j = 1:6
-        diff_clus(j) = (x(3*j-2)+x(3*j-1)+x(3*j))/3;
-    end
-    c = min(diff_clus);
-    sil_ol99min(i) = (c-a)/max(a,c);
-end
-mean_sil_ol99min = sum(sil_ol99min)/21;
+mean_sil_ol99min = SI(result_ol99min);
 mean_sil_ol99min
 % -0.0444
 
@@ -660,30 +522,7 @@ for m = 1:21
 end
 toc
 
-b = result1;
-% Silhouette
-sil_dtw = zeros(21,1);
-for i = 1:21
-    x = b(i,:);
-    if mod(i,3) == 0
-        a = (x(i-1)+x(i-2))/2;
-        x((i-2):i)=[];
-    elseif mod(i,3) == 1
-        a = (x(i+1)+x(i+2))/2;
-        x(i:(i+2))=[];
-    else
-        a = (x(i-1)+x(i+1))/2;
-        x((i-1):(i+1))=[];
-    end   
-    % 18 numbers are left
-    diff_clus = zeros(6,1);
-    for j = 1:6
-        diff_clus(j) = (x(3*j-2)+x(3*j-1)+x(3*j))/3;
-    end
-    c = min(diff_clus);
-    sil_dtw(i) = (c-a)/max(a,c);
-end
-mean_sil_dtw = sum(sil_dtw)/21;
+mean_sil_dtw = SI(result1);
 mean_sil_dtw
 % -0.6268
 
@@ -815,30 +654,7 @@ for m = 1:21
     end
 end
 
-b = result_ol99min;
-% Silhouette
-sil_ol99min= zeros(21,1);
-for i = 1:21
-    x = b(i,:);
-    if mod(i,3) == 0
-        a = (x(i-1)+x(i-2))/2;
-        x((i-2):i)=[];
-    elseif mod(i,3) == 1
-        a = (x(i+1)+x(i+2))/2;
-        x(i:(i+2))=[];
-    else
-        a = (x(i-1)+x(i+1))/2;
-        x((i-1):(i+1))=[];
-    end    
-    % 18 numbers are left
-    diff_clus = zeros(6,1);
-    for j = 1:6
-        diff_clus(j) = (x(3*j-2)+x(3*j-1)+x(3*j))/3;
-    end
-    c = min(diff_clus);
-    sil_ol99min(i) = (c-a)/max(a,c);
-end
-mean_sil_ol99min = sum(sil_ol99min)/21;
+mean_sil_ol99min = SI(result_ol99min);
 mean_sil_ol99min
 % 0.0085
 
@@ -873,30 +689,7 @@ for m = 1:21
 end
 toc
 
-b = result1;
-% Silhouette
-sil_dtw = zeros(21,1);
-for i = 1:21
-    x = b(i,:);
-    if mod(i,3) == 0
-        a = (x(i-1)+x(i-2))/2;
-        x((i-2):i)=[];
-    elseif mod(i,3) == 1
-        a = (x(i+1)+x(i+2))/2;
-        x(i:(i+2))=[];
-    else
-        a = (x(i-1)+x(i+1))/2;
-        x((i-1):(i+1))=[];
-    end   
-    % 18 numbers are left
-    diff_clus = zeros(6,1);
-    for j = 1:6
-        diff_clus(j) = (x(3*j-2)+x(3*j-1)+x(3*j))/3;
-    end
-    c = min(diff_clus);
-    sil_dtw(i) = (c-a)/max(a,c);
-end
-mean_sil_dtw = sum(sil_dtw)/21;
+mean_sil_dtw = SI(result1);
 mean_sil_dtw
 % -0.6727
 
@@ -1044,29 +837,6 @@ for m = 1:21
     end
 end
 
-b = result_ol99min;
-% Silhouette
-sil_ol99min= zeros(21,1);
-for i = 1:21
-    x = b(i,:);
-    if mod(i,3) == 0
-        a = (x(i-1)+x(i-2))/2;
-        x((i-2):i)=[];
-    elseif mod(i,3) == 1
-        a = (x(i+1)+x(i+2))/2;
-        x(i:(i+2))=[];
-    else
-        a = (x(i-1)+x(i+1))/2;
-        x((i-1):(i+1))=[];
-    end   
-    % 18 numbers are left
-    diff_clus = zeros(6,1);
-    for j = 1:6
-        diff_clus(j) = (x(3*j-2)+x(3*j-1)+x(3*j))/3;
-    end
-    c = min(diff_clus);
-    sil_ol99min(i) = (c-a)/max(a,c);
-end
-mean_sil_ol99min = sum(sil_ol99min)/21;
+mean_sil_ol99min = SI(result_ol99min);
 mean_sil_ol99min
 % -0.0937
