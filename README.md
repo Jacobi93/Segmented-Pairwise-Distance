@@ -2,8 +2,7 @@
 The paper of this project, named ***Segmented Pairwise Distance for Time Series with Large Discontinuities***, was accepted by WCCI (IJCNN) 2020. SPD is orthogonal to distance-based algorithms and can be embedded in them. We validate advantages of SPD-embedded algorithms over corresponding distance-based ones on both open datasets and a proprietary dataset of surgical time series (of
 surgeons performing a temporal bone surgery in a virtual reality surgery simulator). Experimental results demonstrate that SPD-embedded algorithms outperform corresponding distance-based ones in distance measurement between time series with large discontinuities, measured by the Silhouette index (SI).
 
-<img src="DTW&SDTW.png" width="100" >
-![](DTW&SDTW.png)
+<img src="DTW&SDTW.png" width="600" >
 
 ## Prerequisites
 Matlab
